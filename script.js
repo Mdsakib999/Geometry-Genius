@@ -1,7 +1,16 @@
+// Going to blog page
+document.getElementById('blog-btn').addEventListener('click', function() {
+    window.location.href = 'blog.html'
+})
+
+
+
+
+
 // get input value
 function getInputValue(id){
     const value = document.getElementById(id).value;
-    return value;
+    return parseInt(value);
 }
 
 
@@ -28,14 +37,19 @@ document.getElementById('card1-btn').addEventListener('click', function(){
     num += 1;
     const triangleBase = getInputValue('triangle-base');
     const triangleHeight = getInputValue('triangle-hight');
-    const triangleName = getInnerTextValue("card-1-name")
+    const triangleName = getInnerTextValue("card-1-name");
+    if(isNaN(triangleBase) && isNaN(triangleHeight)) {
+        alert('enter a valid number');
 
-    let triangleArea = parseFloat(0.5 * triangleBase * triangleHeight).toFixed(2);
-    
-    // add Element by click
-    addElement(triangleName, triangleArea);
+    }
 
-    console.log(triangleBase, triangleHeight, triangleArea);
+    else{
+        // add Element by click
+
+        let triangleArea = parseFloat(0.5 * triangleBase * triangleHeight).toFixed(2);
+        addElement(triangleName, triangleArea);
+    }
+
 })
 
 // Rectangle calculation.
@@ -47,7 +61,6 @@ document.getElementById('card-2-btn').addEventListener('click', function(){
 
     let rectangleArea = parseFloat(rectangleLength * rectangleWidth).toFixed(2);
 
-    console.log(rectangleWidth, rectangleLength, rectangleArea);
 
     addElement(rect_name, rectangleArea);
 })
