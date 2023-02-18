@@ -4,13 +4,10 @@ document.getElementById('blog-btn').addEventListener('click', function() {
 })
 
 
-
-
-
 // get input value
 function getInputValue(id){
     const value = document.getElementById(id).value;
-    return parseInt(value);
+    return parseFloat(value);
 }
 
 
@@ -28,8 +25,6 @@ function addElement(name, area) {
     `
     tableBody.appendChild(t_row);
 }
-
-
 
 
 // Triangle calculation.

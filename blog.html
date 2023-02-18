@@ -14,19 +14,26 @@
 
     <div class="w-[80%] mx-auto p-5 box rounded-md shadow-xl">
         <h3 class="font-medium	">Q.1 What is DOM and what is the purpose of DOM?</h3>
-        <p></p>
+        <p>Ans: The Document Object Model (DOM) is a programming interface for web documents that allows us to create, change, or remove elements from the document. DOM views an HTML document as a tree of nodes. A node represents an HTML element. We can also add events to these elements to make our page more dynamic. DOM allows programmer to add or remove or change any style or element using programming language. It represents the page so that programs can change the document structure of a web page.
+        </p>
     </div>
     <div class="w-[80%] mx-auto p-5 box rounded-md shadow-xl mt-9">
         <h3 class="font-medium	">Q.2 How will you select HTML elements using DOM? Name the DOM methods.</h3>
-        <p></p>
+        <p>There are 5 ways in which we can select elements in a DOM using selectors:</p>
+        <p><span class="font-bold">getElementsByTagName(): </span> We can get all the elements matches the specified tag name through this method.</p>
+        <p><span class="font-bold">getElementsByClassName(): </span>We can get all the elements matches the specified Class name through this method. we used this selector to select all the element of same class name.</p>
+        <p><span class="font-bold">getElementById(): </span>We mostly use this selector. The selection is based on the Id name.  In all the above selectors, a list of all matching elements is returned. But this selector returns only the first matching element, ignoring the rest..  This is unique and only one element. </p>
+        <p><span class="font-bold">document.querySelector(): </span>This one returns the first element that matches the specified CSS selector in the document. </p>
+        <p><span class="font-bold">document.querySelectorAll(): </span>This method returns all the elements that match the specified CSS selector in the document. </p>
     </div>
     <div class="w-[80%] mx-auto p-5 box rounded-md shadow-xl mt-9">
         <h3 class="font-medium	">Q.3 What is event bubble?</h3>
-        <p></p>
+        <p>Ans: Event bubbles are a method of event propagation in the HTML DOM API when an event is inside another element and both elements register a handle to that event.The bubble event property returns true if an event is a bubble event otherwise it returns false. It's a process that starts with the element that triggers the event and then bubbles up to the elements in sequence.In event bubbling, the event is first captured and handled by the underlying component and then propagated to the outer components.
+        </p>
     </div>
     <div class="w-[80%] mx-auto p-5 box rounded-md shadow-xl mt-9">
         <h3 class="font-medium	">Q.4 What is a callback function and why will you use it?</h3>
-        <p></p>
+        <p>Ans: A callback function is a function that is passed as an argument to another function so that it can be executed in another function is called a callback function. The primary purpose of a callback is to execute code in response to an event. You can instruct your application to execute this code whenever the user clicks a key on the keyboard with a callback function.</p>
     </div>
     
 </body>
