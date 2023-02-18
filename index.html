@@ -27,14 +27,14 @@
     </header>
     
         <!-- main body -->
-    <section class="w-[90%] mx-auto mt-10 ">
-        <div class="card-body w-[70%] grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <section class="w-[90%] mx-auto mt-10 flex flex-col md:flex-row lg:flex-row">
+        <div class="card-body w-[90%] mx-auto lg:w-[68%] grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             <div id="card-1" class="card w-full bg-base-100 shadow-xl ">
                 <figure class="px-10 pt-10">
                   <img src="img/triangle.png" alt="triangle" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h3 class="text-2xl font-bold">Triangle</h3>
+                    <h3 id="card-1-name" class="text-2xl font-bold">Triangle</h3>
                     <p class="font-semibold ">Area (A) = 0.5 X b X h</p>
                     <div class="">
                         <p class="inline">
@@ -43,7 +43,7 @@
                             <input id="triangle-hight" class="w-[30%] mx-2 bg-slate-200 rounded pl-2" type="text" placeholder="h">cm</p>
                     </div>
                   <div class="card-actions mt-2">
-                    <button class="btn btn-primary ">Calculate</button>
+                    <button id="card1-btn" class="btn btn-primary ">Calculate</button>
                   </div>
                 </div>
             </div>
@@ -53,16 +53,16 @@
                   <img src="img/rectangle.png" alt="Rectangle" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h3 class="text-2xl font-bold">Rectangle</h3>
+                    <h3 id="card-2-name" class="text-2xl font-bold">Rectangle</h3>
                     <p class="font-semibold ">Area (A) = w X l</p>
                     <div class="">
                         <p class="inline">
-                            <input id="triangle-base" class="w-[30%] mr-2 bg-slate-200 rounded pl-2" type="text" placeholder="w">cm</p> 
+                            <input id="rectangle-width" class="w-[30%] mr-2 bg-slate-200 rounded pl-2" type="text" placeholder="w">cm</p> 
                         <p class="inline">
-                            <input id="triangle-hight" class="w-[30%] mx-2 bg-slate-200 rounded pl-2" type="text" placeholder="l">cm</p>
+                            <input id="rectangle-length" class="w-[30%] mx-2 bg-slate-200 rounded pl-2" type="text" placeholder="l">cm</p>
                     </div>
                   <div class="card-actions mt-2">
-                    <button class="btn btn-primary ">Calculate</button>
+                    <button id="card-2-btn" class="btn btn-primary ">Calculate</button>
                   </div>
                 </div>
             </div>
@@ -72,14 +72,14 @@
                   <img src="img/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h3 class="text-2xl font-bold">Parallelogram</h3>
+                    <h3 id="card-3-name" class="text-2xl font-bold">Parallelogram</h3>
                     <p class="font-semibold ">Area (A) = b X h</p>
                     <div class="font-semibold ">
-                        <p class="inline">b = <span id="">10</span> cm,</p> 
-                        <p class="inline">h = <span id="">12</span> cm</p>
+                        <p class="inline">b = <span id="parallelogram-base">10</span> cm,</p> 
+                        <p class="inline">h = <span id="parallelogram-height">12</span> cm</p>
                     </div>
                   <div class="card-actions mt-2">
-                    <button class="btn btn-primary ">Calculate</button>
+                    <button id="card-3-btn" class="btn btn-primary ">Calculate</button>
                   </div>
                 </div>
             </div>
@@ -89,57 +89,84 @@
                   <img src="img/rhombus.png" alt="Rhombus" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h3 class="text-2xl font-bold">Rhombus</h3>
+                    <h3 id="card-4-name" class="text-2xl font-bold">Rhombus</h3>
                     <p class="font-semibold ">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                     <div class="">
                       <div class="font-semibold ">
-                        <p class="inline">d<sub>1</sub> = <span id="">16</span> cm,</p> 
-                        <p class="inline">d<sub>2</sub> = <span id="">8</span> cm</p>
+                        <p class="inline">d<sub>1</sub> = <span id="sid-1">16</span> cm,</p> 
+                        <p class="inline">d<sub>2</sub> = <span id="sid-2">8</span> cm</p>
                     </div>
                     </div>
                   <div class="card-actions mt-2">
-                    <button class="btn btn-primary ">Calculate</button>
+                    <button id="card-4-btn" class="btn btn-primary ">Calculate</button>
                   </div>
                 </div>
             </div>
+
             <div id="card-5" class="card w-full bg-base-100 shadow-xl ">
                 <figure class="px-10 pt-10">
                   <img src="img/pentagon.png" alt="pentagon" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h3 class="text-2xl font-bold">Pentagon</h3>
+                    <h3 id="card-5-name" class="text-2xl font-bold">Pentagon</h3>
                     <p class="font-semibold ">Area (A) = 0.5 X p X b</p>
                     <div class="">
-                      <p class="inline">p = <span id="">6</span> cm,</p> 
-                      <p class="inline">b = <span id="">10</span> cm</p>
+                      <p class="inline">p = <span id="pentagon-p">6</span> cm,</p> 
+                      <p class="inline">b = <span id="pentagon-b">10</span> cm</p>
                     </div>
                   <div class="card-actions mt-2">
-                    <button class="btn btn-primary ">Calculate</button>
+                    <button id="card-5-btn" class="btn btn-primary ">Calculate</button>
                   </div>
                 </div>
             </div>
+
             <div id="card-6" class="card w-full bg-base-100 shadow-xl ">
                 <figure class="px-10 pt-10">
                   <img src="img/ellipse.png" alt="ellipse" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h3 class="text-2xl font-bold">Ellipse</h3>
+                    <h3 id="card-6-name" class="text-2xl font-bold">Ellipse</h3>
                     <p class="font-semibold ">Area (A) = <span>&#960;</span>ab</p>
                     <div class="">
-                      <p class="inline">a = <span id="">10</span> cm,</p> 
-                      <p class="inline">b = <span id="">4</span> cm</p>
+                      <p class="inline">a = <span id="axis_a">10</span> cm,</p> 
+                      <p class="inline">b = <span id="axis_b">4</span> cm</p>
                     </div>
                   <div class="card-actions mt-2">
-                    <button class="btn btn-primary ">Calculate</button>
+                    <button id="card-6-btn" class="btn btn-primary ">Calculate</button>
                   </div>
                 </div>
             </div>
 
         </div>
+        
 
 
-        <div class="card-details">
+        <div class="card-details w-full lg:w-[31%] mx-auto">
+            <h1 class="text-3xl text-center font-bold	underline mb-4 ">Area Calculation</h1>
 
+
+            <div class="overflow-x-auto">
+              <table class="table w-full">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>Area</th>
+                    <th>Job</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+                  <!-- row 1 -->
+                  <!-- <tr>
+                    <th>1</th>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Cont</td>
+                  </tr> -->
+                  
+
+                </tbody>
+              </table>
+            </div>
         </div>
     </section>
 
@@ -147,7 +174,6 @@
 
 
 
-    <input id="triangle-base" class="w-[30%] mr-2 bg-slate-200 rounded pl-2" type="text" placeholder="b">
 
 
     <script src="script.js"></script>
