@@ -99,7 +99,6 @@ document.getElementById('card-4-btn').addEventListener('click', function(){
     const RhombusName = getInnerTextValue('card-4-name')
     let RhombusArea = parseFloat(0.5 * rhombus_side_1 * rhombus_side_2).toFixed(2);
 
-    // console.log(parallelogramBase, parallelogramHeight, parallelogramArea);
 
     // Show element
     addElement(RhombusName, RhombusArea);
@@ -117,7 +116,6 @@ document.getElementById('card-5-btn').addEventListener('click', function(){
     const pentagonName = getInnerTextValue('card-5-name')
     let pentagonArea = parseFloat(0.5 * pentagon_b * pentagon_p).toFixed(2);
 
-    // console.log(parallelogramBase, parallelogramHeight, parallelogramArea);
 
     // Show element
     addElement(pentagonName, pentagonArea);
@@ -133,8 +131,6 @@ document.getElementById('card-6-btn').addEventListener('click', function(){
     const ellipseName = getInnerTextValue('card-6-name')
     let ellipseArea = parseFloat(3.1416 * axis_a * axis_b).toFixed(2);
 
-    // console.log(parallelogramBase, parallelogramHeight, parallelogramArea);
-
     // Show element
     addElement(ellipseName, ellipseArea);
 })
@@ -142,18 +138,7 @@ document.getElementById('card-6-btn').addEventListener('click', function(){
 
 
 
-// hover background color change
-
-/*  var color = [, "#3C9EE7", "#E7993C",
-            "#E73C99", "#3CE746", "#E7993C"];
-  
-        document.querySelectorAll(".card").addEventListener(
-                    "mouseover", function () {
-  
-            document.querySelectorAll(".card").style.background 
-                = color[Math.floor(Math.random() * color.length)];
-        })
- */
+// js code for changing background color 
 
         function randomColor() {
             let color = [];
