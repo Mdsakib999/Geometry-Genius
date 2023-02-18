@@ -160,5 +160,43 @@ document.getElementById('card-6-btn').addEventListener('click', function(){
         })
  */
 
-        
+        function randomColor() {
+            let color = [];
+            for (let i = 0; i < 3; i++) {
+              color.push(Math.floor(Math.random() * 256));
+            }
+            return 'rgb(' + color.join(', ') + ')';
+          } 
+          
+        document.getElementById('card-1').addEventListener('mouseover', function() {
+            const my_card_1 = document.getElementById('card-1');
+
+            my_card_1.style.backgroundColor = randomColor();
+        })
+
+        document.getElementById('card-2').addEventListener('mouseover', function() {
+            const my_card_2 = document.getElementById('card-2');
+
+            my_card_2.style.backgroundColor = randomColor();
+        })
+        document.getElementById('card-3').addEventListener('mouseover', function() {
+            const my_card_3 = document.getElementById('card-3');
+
+            my_card_3.style.backgroundColor = randomColor();
+        })
+        document.getElementById('card-4').addEventListener('mouseover', function() {
+            const my_card_4 = document.getElementById('card-4');
+
+            my_card_4.style.backgroundColor = randomColor();
+        })
+        document.getElementById('card-5').addEventListener('mouseover', function() {
+            const my_card_5 = document.getElementById('card-5');
+
+            my_card_5.style.backgroundColor = randomColor();
+        })
+        document.getElementById('card-6').addEventListener('mouseover', function() {
+            const my_card_6 = document.getElementById('card-6');
+
+            my_card_6.style.backgroundColor = randomColor();
+        })      
           
