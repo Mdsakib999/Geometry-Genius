@@ -34,18 +34,18 @@ function addElement(name, area) {
 
 // Triangle calculation.
 document.getElementById('card1-btn').addEventListener('click', function(){
-    num += 1;
+    
     const triangleBase = getInputValue('triangle-base');
     const triangleHeight = getInputValue('triangle-hight');
     const triangleName = getInnerTextValue("card-1-name");
-    if(isNaN(triangleBase) && isNaN(triangleHeight)) {
-        alert('enter a valid number');
+    if(isNaN(triangleBase) || isNaN(triangleHeight) || triangleBase < 0 || triangleHeight < 0) {
+        alert('Enter a valid positive number');
 
     }
 
     else{
         // add Element by click
-
+        num += 1;
         let triangleArea = parseFloat(0.5 * triangleBase * triangleHeight).toFixed(2);
         addElement(triangleName, triangleArea);
     }
@@ -54,15 +54,20 @@ document.getElementById('card1-btn').addEventListener('click', function(){
 
 // Rectangle calculation.
 document.getElementById('card-2-btn').addEventListener('click', function(){
-    num+= 1;
+    
     const rectangleWidth = getInputValue('rectangle-width');
     const rectangleLength = getInputValue('rectangle-length');
-    const rect_name = getInnerTextValue('card-2-name')
+    const rect_name = getInnerTextValue('card-2-name');
 
-    let rectangleArea = parseFloat(rectangleLength * rectangleWidth).toFixed(2);
+    if(isNaN(rectangleWidth) || isNaN(rectangleLength) || rectangleWidth < 0 || rectangleLength < 0) {
+        alert('Enter a valid positive number');
+    }
+    else{
+        num+= 1;
+        let rectangleArea = parseFloat(rectangleLength * rectangleWidth).toFixed(2);
+        addElement(rect_name, rectangleArea);
+    }
 
-
-    addElement(rect_name, rectangleArea);
 })
 
 
@@ -138,3 +143,22 @@ document.getElementById('card-6-btn').addEventListener('click', function(){
     // Show element
     addElement(ellipseName, ellipseArea);
 })
+
+
+
+
+// hover background color change
+
+/*  var color = [, "#3C9EE7", "#E7993C",
+            "#E73C99", "#3CE746", "#E7993C"];
+  
+        document.querySelectorAll(".card").addEventListener(
+                    "mouseover", function () {
+  
+            document.querySelectorAll(".card").style.background 
+                = color[Math.floor(Math.random() * color.length)];
+        })
+ */
+
+        
+          
